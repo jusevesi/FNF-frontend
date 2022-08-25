@@ -18,7 +18,7 @@
             <div class="post-body">
                 <h5 class="post-title">{{ post.name }}</h5>
                 <p class="post-text">{{ post.msg }}</p>
-                <p class="post-text">{{ post.date }}</p>
+                <p class="post-text">{{ post.date.slice(0, 10) }}</p>
             </div>
             <img v-if="post.img" :src="post.img" class="img">
         </div>
@@ -100,6 +100,7 @@ export default {
 }
 
 .img {
+    border-radius: 10px;
     max-height: 300px;
     display: block;
     margin: auto;

@@ -7,8 +7,8 @@
                 <p class="post-text">{{ post.msg }}</p>
                 <p class="post-text">{{ post.date }}</p>
             </div>
-            <img src="https://previews.123rf.com/images/apoev/apoev1903/apoev190300009/124806570-persona-hombre-de-marcador-de-posici%C3%B3n-de-foto-gris-en-camiseta-sobre-fondo-gris.jpg"
-                class="img">
+            <img v-if="post.img" :src="post.img" class="img"><br>
+            <button @click="login($event)" type="submit" class="btn btn-primary">Login</button>
         </div>
     </div>
 </template>
@@ -35,7 +35,7 @@ export default {
                 const headers = {
                     "x-token": localStorage.getItem("token")
                 }
-                const name = localStorage.getItem("name") 
+                const name = localStorage.getItem("name")
 
                 const { data } = await axios.get(`http://localhost:8080/api/posts/profile/${name}`, { headers })
                 this.posts = data.posts;
