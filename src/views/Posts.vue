@@ -20,8 +20,7 @@
                 <p class="post-text">{{ post.msg }}</p>
                 <p class="post-text">{{ post.date }}</p>
             </div>
-            <img src="https://previews.123rf.com/images/apoev/apoev1903/apoev190300009/124806570-persona-hombre-de-marcador-de-posici%C3%B3n-de-foto-gris-en-camiseta-sobre-fondo-gris.jpg"
-                class="img">
+            <img v-if="post.img" :src="post.img" class="img">
         </div>
     </div>
 </template>
