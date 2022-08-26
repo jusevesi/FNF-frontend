@@ -18,5 +18,5 @@ npm run serve
 ```
 3. Open the project in your browser using the following link:
 ```sh
-http://localhost:8081/
+http://localhost:8081/#/login
 ```
