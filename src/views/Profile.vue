@@ -25,7 +25,7 @@
             </div>
         </nav>
         <Navbar />
-        <div v-for="post in posts" :key="post.pid" class="post">
+        <div v-for="post in posts" :key="post.pid" class="postProfile">
             <div class="post-body">
                 <h5 class="post-title">{{ post.name }}</h5>
                 <p class="post-text">{{ post.msg }}</p>
@@ -161,8 +161,13 @@ export default {
     text-align: center;
 }
 
-.post{
+.postProfile{
     max-width: 40%;
+    margin: 30px auto;
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px 25px 15px 25px;
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
 }
 
 </style>

@@ -6,7 +6,6 @@
         <form>
             <h1 class="title">FNF</h1><br>
             <h2>FNF is Not Facebook</h2><br>
-            <h4>REGISTER</h4><br>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Name</label>
                 <input v-model="name" type="text" class="form-control" id="exampleInputName"
@@ -21,6 +20,11 @@
                 <label for="exampleInputPassword1" class="form-label">Password</label>
                 <input v-model="password" type="password" class="form-control" id="exampleInputPassword1"
                     placeholder="********">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Profile Image</label>
+                <input v-model="img" type="text" class="form-control" id="exampleInputName" aria-describedby="emailHelp"
+                    placeholder="http://images.com/image">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Gender</label>
@@ -41,7 +45,7 @@
 import axios from 'axios';
 export default {
     data() {
-        return { email: "", password: "", gender: "", name: "", errorData: null };
+        return { email: "", password: "", gender: "", name: "", img: "", errorData: null };
     },
     methods: {
         async register(event) {
@@ -50,6 +54,7 @@ export default {
 
             try {
                 const body = {
+                    img:this.img,
                     email: this.email,
                     password: this.password,
                     gender: this.gender,
