@@ -1,20 +1,22 @@
-# web-form
+# FNF - Fnf is not Facebook Frontend
 
-## Project setup
-```
-npm install
+This repository contains the frontend in vue for FNF.
+
+## Steps to execute the project
+To execute this project, you must install first the backend in the following link:
+```sh
+https://github.com/jusevesi/FNF-backend
 ```
 
-### Compiles and hot-reloads for development
+1. Clone the project
+```sh
+git clone https://github.com/jusevesi/FNF-frontend
 ```
+2. Execute the project
+```sh
 npm run serve
 ```
-
-### Compiles and minifies for production
+3. Open the project in your browser using the following link:
+```sh
+http://localhost:8081/
 ```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-# FNF-frontend
