@@ -62,14 +62,14 @@ export default {
 
             try {
                 const name = localStorage.getItem("name")
+                    const headers = {
+                        "x-token": localStorage.getItem("token")
+                    };
                 const body = {
                     name,
                     msg: this.msg,
                     img: this.img
-                }
-                const headers = {
-                    "x-token": localStorage.getItem("token")
-                }
+                };
                 const response = await axios.post('http://localhost:8080/api/posts', body, { headers });
                 location.reload();
             } catch (error) {
@@ -84,7 +84,7 @@ export default {
 .post {
     margin: 30px auto;
     background: #fff;
-    max-width: 600px;
+    max-width: 60%;
     border-radius: 15px;
     padding: 25px 25px 15px 25px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
@@ -93,7 +93,7 @@ export default {
 .createPost {
     margin: 30px auto;
     background: #fff;
-    max-width: 600px;
+    max-width: 60%;
     border-radius: 15px;
     padding: 25px 25px 15px 25px;
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
@@ -104,6 +104,6 @@ export default {
     max-height: 300px;
     display: block;
     margin: auto;
-    max-width: 400px;
+    max-width: 100%;
 }
 </style>

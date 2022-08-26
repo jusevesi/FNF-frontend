@@ -32,12 +32,11 @@ export default {
   methods: {
     async login(event) {
       if (event) event.preventDefault();
-      const body = {
-        email: this.email,
-        password: this.password
-      }
-
       try {
+        const body = {
+          email: this.email,
+          password: this.password
+        }
         const { data } = await axios.post('http://localhost:8080/api/auth/login', body);
 
         localStorage.setItem('name', data.user.name);
@@ -57,17 +56,4 @@ export default {
 </script>
 
 <style>
-.container {
-  margin-top: 100px;
-  text-align: center;
-  width: 500px;
-}
-
-.title {
-  color: white;
-  font-family: 'Calibri' Bold;
-  font-size: 100px;
-  background-color: #1877F2;
-  border-radius: 20px;
-}
 </style>
